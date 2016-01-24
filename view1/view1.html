@@ -1,13 +1,10 @@
-<div ng-cloak>
+<div ng-controller="View1Ctrl" ng-cloak>
   <md-content>
     <md-tabs md-dynamic-height md-border-bottom>
       <md-tab label="Jan">
         <md-content class="md-padding">
-          <md-list>
+          <md-list class="overflow:hidden;">
             <md-list-item class="md-2-line">
-              <!--<span style="background-color: #3F51B5;text-align: center;" class="md-avatar">-->
-                <!--<span class="element">12일</span>-->
-              <!--</span>-->
               <h3 style="margin-top: 20px;margin-right: 18px;">12일</h3>
               <div class="md-list-item-text" layout="column">
                 <h3>회비 입금</h3>
@@ -20,15 +17,21 @@
               <h3 style="margin-top: 20px;margin-right: 18px;">13일</h3>
               <div class="md-list-item-text" layout="column">
                 <h3 style="margin-top: 5px;">
-                  1월 모임
+                  <md-button class="md-raised md-mini" ng-click="showDetail($event)">
+                    1월 모임
+                  </md-button>
                 </h3>
-                <p>계절 밥상: 30,000원, 스타벅스 커피: 25,000</p>
-                <p>
-                  <md-button class="md-raised" href="http://i.imgur.com/BooTqeg.jpg" style="background: url(http://i.imgur.com/BooTqeg.jpg);background-repeat: no-repeat;background-size: 100% 100%;min-width: 40px;margin-left:2px;margin-right:2px;">
-                  </md-button>
-                  <md-button class="md-raised" href="http://i.imgur.com/BooTqeg.jpg" style="background: url(http://i.imgur.com/BooTqeg.jpg);background-repeat: no-repeat;background-size: 100% 100%;min-width: 40px;margin-left:2px;margin-right:2px;">
-                  </md-button>
-                </p>
+                <!--<md-whiteframe class="md-whiteframe-1dp">-->
+                  <!--<p>-->
+                    <!--계절 밥상: 30,000원, 스타벅스 커피: 25,000-->
+                  <!--</p>-->
+                  <!--<p>-->
+                    <!--<md-button class="md-raised" href="http://i.imgur.com/BooTqeg.jpg" style="background: url(http://i.imgur.com/BooTqeg.jpg);background-repeat: no-repeat;background-size: 100% 100%;min-width: 40px;margin-left:2px;margin-right:2px;">-->
+                    <!--</md-button>-->
+                    <!--<md-button class="md-raised" href="http://i.imgur.com/BooTqeg.jpg" style="background: url(http://i.imgur.com/BooTqeg.jpg);background-repeat: no-repeat;background-size: 100% 100%;min-width: 40px;margin-left:2px;margin-right:2px;">-->
+                    <!--</md-button>-->
+                  <!--</p>-->
+                <!--</md-whiteframe>-->
                 <h3 class="md-secondary" style="color: #FF5252;font-weight: bold;">- 55,000 원</h3>
               </div>
             </md-list-item>
@@ -39,33 +42,6 @@
                 <h3>회비 입금</h3>
                 <p>최누리</p>
                 <h3 class="md-secondary" style="color: #3F51B5;font-weight: bold;">+ 10,000 원</h3>
-              </div>
-            </md-list-item>
-            <md-divider ></md-divider>
-            <md-list-item class="md-2-line">
-              <h3  style="margin-top: 20px;margin-right: 18px;">15일</h3>
-              <div class="md-list-item-text" layout="column">
-                <h3>회비 입금</h3>
-                <p>B 언니</p>
-                <h3 class="md-secondary" style="color: #3F51B5;font-weight: bold;">+ 110,000 원</h3>
-              </div>
-            </md-list-item>
-            <md-divider ></md-divider>
-            <md-list-item class="md-2-line">
-              <h3  style="margin-top: 20px;margin-right: 18px;">15일</h3>
-              <div class="md-list-item-text" layout="column">
-                <h3>회비 입금</h3>
-                <p>B 언니</p>
-                <h3 class="md-secondary" style="color: #3F51B5;font-weight: bold;">+ 110,000 원</h3>
-              </div>
-            </md-list-item>
-            <md-divider ></md-divider>
-            <md-list-item class="md-2-line">
-              <h3  style="margin-top: 20px;margin-right: 18px;">15일</h3>
-              <div class="md-list-item-text" layout="column">
-                <h3>회비 입금</h3>
-                <p>B 언니</p>
-                <h3 class="md-secondary" style="color: #3F51B5;font-weight: bold;">+ 110,000 원</h3>
               </div>
             </md-list-item>
             <md-divider ></md-divider>
