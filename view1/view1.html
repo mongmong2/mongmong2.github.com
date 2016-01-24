@@ -42,7 +42,9 @@
               </div>
             </md-list-item>
           </md-list>
-          <md-button class="md-fab md-mini md-primary" id="elementAddButton" ng-click="showAdvanced($event)" style="display: inline-block;position: fixed;bottom: 40px;">
+          <div id="elementAddButtonBackground" style="background-color: white;border-radius:50%;height:50px;width: 50px;display: inline-block;position: fixed;bottom: 40px;z-index:1;">
+          </div>
+          <md-button class="md-fab md-mini md-primary" id="elementAddButton" ng-click="showAdvanced($event)" style="display: inline-block;position: fixed;bottom: 40px;z-index: 2;">
             <md-icon md-svg-src="./img/icons/add64.svg" style="height:14px;"></md-icon>
           </md-button>
           <div layout="column" style="background-color: #3F51B5;display: inline-block;position: fixed;bottom: 0px;left: 0px;width: 100%;padding-left:14px;padding-right:14px;">

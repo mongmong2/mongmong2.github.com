@@ -16,11 +16,15 @@ angular.module('myApp.view1', ['ngRoute'])
       listContent.css('height', windowHeight + "px");
 
       var elementAddButtonSrc = document.getElementById('elementAddButton');
+      var elementAddButtonBackgroundSrc = document.getElementById('elementAddButtonBackground');
       var elementAddButton = angular.element(elementAddButtonSrc);
+      var elementAddButtonBackground = angular.element(elementAddButtonBackgroundSrc);
       var windowWidth = $window.innerWidth;
-      var buttonPositionX = (windowWidth / 2) - 21;
+      var buttonPositionX = (windowWidth / 2) - 28;
+      var backgroundPositionX = (windowWidth / 2) - 25;
 
       elementAddButton.css('left', buttonPositionX + 'px');
+      elementAddButtonBackground.css('left', backgroundPositionX + 'px');
     });
 
     $scope.showDetail = function(ev) {
