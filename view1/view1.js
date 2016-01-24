@@ -8,15 +8,28 @@ angular.module('myApp.view1', ['ngRoute'])
       controller: 'View1Ctrl'
     });
   }])
-  .controller('View1Ctrl', ['$scope', '$mdMedia', '$mdDialog', function ($scope, $mdMedia, $mdDialog) {
+  .controller('View1Ctrl', ['$scope', '$mdMedia', '$mdDialog', '$window', function ($scope, $mdMedia, $mdDialog, $window) {
+    angular.element(document).ready(function() {
+      var elementAddButtonSrc = document.getElementById('elementAddButton');
+      var elementAddButton = angular.element(elementAddButtonSrc);
+      var windowWidth = $window.innerWidth;
+      var buttonPositionX = (windowWidth / 2) - 21;
+
+      elementAddButton.css('left', buttonPositionX + 'px');
+    });
+
     $scope.showDetail = function(ev) {
+      var sourceElement = angular.element(ev.srcElement);
+      console.log(sourceElement);
       $mdDialog.show({
         controller: DialogController,
         templateUrl: 'meetingDetail.html',
         parent: angular.element(document.body),
         targetEvent: ev,
         clickOutsideToClose: true,
-        fullscreen: true
+        fullscreen: true,
+        openFrom: sourceElement,
+        closeTo: sourceElement
       })
     };
 
