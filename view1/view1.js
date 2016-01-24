@@ -10,6 +10,11 @@ angular.module('myApp.view1', ['ngRoute'])
   }])
   .controller('View1Ctrl', ['$scope', '$mdMedia', '$mdDialog', '$window', function ($scope, $mdMedia, $mdDialog, $window) {
     angular.element(document).ready(function() {
+      var listContent = angular.element(document.getElementById('listContent'));
+      var windowHeight = $window.innerHeight;
+
+      listContent.css('height', windowHeight);
+
       var elementAddButtonSrc = document.getElementById('elementAddButton');
       var elementAddButton = angular.element(elementAddButtonSrc);
       var windowWidth = $window.innerWidth;
