@@ -13,7 +13,9 @@ angular.module('myApp.view1', ['ngRoute'])
       var listContent = angular.element(document.getElementById('listContent'));
       var windowHeight = $window.innerHeight;
 
-      listContent.css('height', windowHeight);
+      listContent.css('height', windowHeight + "px");
+
+      alert("windowHeight == " + windowHeight + "px");
 
       var elementAddButtonSrc = document.getElementById('elementAddButton');
       var elementAddButton = angular.element(elementAddButtonSrc);
