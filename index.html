@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="ko" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="ko" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="ko" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="ko" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>미녀 4총사의 가계부</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+  <div ng-controller="IndexController as ctrl" ng-cloak>
+    <md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="left">
+      <md-toolbar class="md-theme-light">
+        <h1 class="md-toolbar-tools">Sidenav Left</h1>
+      </md-toolbar>
+      <md-content layout-padding>
+        <md-input-container style="margin-right: 10px;">
+          <md-select ng-model="year">
+            <md-option ng-repeat="year in ctrl.yearList" value="{{year}}" ng-click="selectYear(year)">
+            {{year}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+        <div>
+          <p style="float: right;">
+            <!--<img src="http://www.misskatecuttables.com/uploads/shopping_cart/7222/large_monkey.png" style="height:56px;margin-right:10px;">&ndash;&gt;            <md-button class="md-fab" href="./img/member_02.jpeg" style="background: url(./img/member_02.jpeg);background-repeat: no-repeat;background-size: 100% 100%;width:40px;height: 40px;margin-left:2px;margin-right:2px;">-->
+            </md-button>
+            <md-button class="md-fab" href="./img/member_04.jpeg" style="background: url(./img/member_04.jpeg);background-repeat: no-repeat;background-size: 100% 100%;width:40px;height: 40px;margin-left:2px;margin-right:2px;">
+            </md-button>
+            <md-button class="md-fab" href="./img/member_03.jpeg" style="background: url(./img/member_03.jpeg);background-repeat: no-repeat;background-size: 100% 100%;width:40px;height: 40px;margin-left:2px;margin-right:2px;">
+            </md-button>
+            <md-button class="md-fab" href="./img/member_01.jpeg" style="background: url(./img/member_01.jpeg);background-repeat: no-repeat;background-size: 100% 100%;width:40px;height: 40px;margin-left:2px;margin-right:4px;">
+            </md-button>
+          </p>
+          <md-button ng-click="close()" class="md-primary">메뉴 닫기</md-button>
+        </div>
+      </md-content>
+    </md-sidenav>
+
+    <md-content>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <span style="width: 100%;">
+            <span>
+              <md-button class="md-icon-button"  ng-click="toggleMenu()" ng-hide="isOpenMenu()" aria-label="Settings">
+                <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+              </md-button>
+              <label>{{selectedYear}}년도 미녀 4총사 모임장부</label>
+            </span>
+          </span>
+        </div>
+      </md-toolbar>
+    </md-content>
+  </div>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div ng-view></div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+  <script src="bower_components/angular-material/angular-material.min.js"></script>
+  <script src="app.js"></script>
+  <script src="accountlist/accountlist.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>
