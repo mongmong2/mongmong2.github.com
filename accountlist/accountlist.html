@@ -1,5 +1,5 @@
 <md-content ng-controller="AccountListController">
-  <md-tabs md-dynamic-height md-border-bottom>
+  <md-tabs md-dynamic-height md-border-bottom md-swipe-content="true">
     <md-tab ng-repeat="month in monthList" md-on-select="loadAccountBookItems(month.value)">
       <md-tab-label>{{month.name}}</md-tab-label>
       <md-tab-body>
